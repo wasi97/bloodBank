@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1093454751158",
+    "project_id": "wasibloodbank",
+    "storage_bucket": "wasibloodbank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093454751158:android:113c5486d565565268cd17",
+        "android_client_info": {
+          "package_name": "com.bloodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093454751158-1vko7qer9ah37mvk06g0j3mdbs91le4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmD7fcIQy0HamA3EZVDeOK0Se2BxBFIY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093454751158-1vko7qer9ah37mvk06g0j3mdbs91le4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
