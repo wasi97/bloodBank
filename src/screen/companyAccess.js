@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, Button } from 'native-base'
 import database from '@react-native-firebase/database'
 import {StyleSheet} from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
 
 
 const companyAccess = () => {
@@ -44,7 +45,9 @@ const companyAccess = () => {
     });
   };
 
-  return <View>{list()}</View>;
+  return <ScrollView>
+      <View>{list()}</View>;
+      </ScrollView>
 };
 
 export default companyAccess;
