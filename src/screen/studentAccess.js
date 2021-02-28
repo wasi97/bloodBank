@@ -4,36 +4,32 @@ import database from '@react-native-firebase/database'
 import {StyleSheet} from 'react-native'
 
 
-const Home = () => {
+const companyAccess = () => {
 
   const [userdata, setUserData] = useState([])
 
 
 
   const list = () => {
-    database().ref('/students').on('child_added', function (snapshot) {
+    database().ref('/company').on('child_added', function (snapshot) {
       const data = snapshot.val()
       setUserData(userdata => [...userdata, data])
     });
     return userdata.map((element) => {
       return (
-        // <View key={element.key} style={{margin: 10}}>
-        //   <Text>{element.FirstName}</Text>
-        //   <Text>{element.Password}</Text>
-        // </View>
         <View  >
           <View style={styles.container}>
             <View >
-              <Text style={[styles.name, styles.design]}>{element.FirstName}</Text>
+              <Text style={[styles.name, styles.design]}>{element.CompanyName}</Text>
             </View>
             <View >
-              <Text style={[styles.Marks, styles.design]}>{element.Marks}</Text>
+              <Text style={[styles.Marks, styles.design]}>{element.cellNum}</Text>
+            </View>
+            <View >
+              <Text style={[styles.Marks, styles.design]}>{element.email}</Text>
             </View>
             <View>
-              <Text style={[styles.address, styles.design]}>{element.address}</Text>
-            </View>
-            <View>
-              <Text style={[styles.contact, styles.design]}>{element.contact}</Text>
+              <Text style={[styles.address, styles.design]}>{element.location}</Text>
             </View>
           </View>
         </View>
@@ -44,7 +40,7 @@ const Home = () => {
   return <View>{list()}</View>;
 };
 
-export default Home;
+export default companyAccess;
 
 
 

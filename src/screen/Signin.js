@@ -4,54 +4,32 @@ import { StyleSheet } from "react-native"
 
 
 export default function SignIn(props) {
-  return (
-    <Container>
-      {/* header  */}
-      <Header>
-        <Left />
-        <Body>
-          <Title style={{ paddingLeft: 20 }}>
-            Wasi Blood Bank
-</Title>
-        </Body>
-      </Header>
-      {/* form sign in credentias */}
-      <Form>
-        <Item stackedLabel>
-          <Label>Username</Label>
-          <Input />
-        </Item>
-        <Item stackedLabel >
-          <Label>Password</Label>
-          <Input />
-        </Item>
-        <Item stackedLabel >
-          <Button rounded block onPress={()=>props.navigation.navigate('Home')}>
-            <Text>Login</Text>
+    return (
+        <Container>
+          <Text></Text>
+            <Button rounded block onPress={()=>props.navigation.navigate('studentLogin')}>
+            <Text>Student Login</Text>
           </Button>
-        </Item>
-      </Form>
+          <Text></Text>
+            <Button rounded block onPress={()=>props.navigation.navigate('companyLogin')}>
+            <Text>Company Login</Text>
+          </Button>
+          <Text></Text>
+            <Button rounded block onPress={()=>props.navigation.navigate('adminLogin')}>
+            <Text>Admin Login</Text>
+          </Button>
 
-      <Container>
+
+          <Container>
         <Text></Text>
-        <Text>Don't have account </Text>
+        <Text>Don't have an account </Text>
         <Text></Text>
         <Button rounded block onPress={() => props.navigation.navigate('SignUp')}>
           <Text>Sign Up</Text>
         </Button>
       </Container>
 
-    </Container>
+        </Container>
 
-  )
-
-}
-
-
-
-
-const styles = StyleSheet.create({
-  Main: {
-
-  }
-})
+        
+    )}
